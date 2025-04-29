@@ -16,7 +16,7 @@ import jetbrains.buildServer.vcs.VcsFileContentProvider;
 import jetbrains.buildServer.vcs.VcsSupportContext;
 import jetbrains.buildServer.vcs.VcsSupportCore;
 
-public class AppServer extends BaseController implements VcsSupportContext {
+public class AppServer extends BaseController {
     private PluginDescriptor myDescriptor;
 
     public AppServer(WebControllerManager manager, PluginDescriptor descriptor) {
@@ -24,39 +24,9 @@ public class AppServer extends BaseController implements VcsSupportContext {
         myDescriptor = descriptor;
     }
 
-    @Nullable
     @Override
-    protected ModelAndView doHandle(HttpServletRequest arg0, HttpServletResponse arg1) throws Exception {
-        return new ModelAndView(myDescriptor.getPluginResourcesPath("example.jsp"));
-    }
-
-    @Override
-    public <T extends VcsExtension> T getVcsExtension(Class<T> extensionClass) {
+    protected ModelAndView doHandle(HttpServletRequest request, HttpServletResponse response) throws Exception {
         // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getVcsExtension'");
-    }
-
-    @Override
-    public VcsSupportCore getCore() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getCore'");
-    }
-
-    @Override
-    public VcsFileContentProvider getContentProvider() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getContentProvider'");
-    }
-
-    @Override
-    public CollectChangesPolicy getCollectChangesPolicy() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getCollectChangesPolicy'");
-    }
-
-    @Override
-    public BuildPatchPolicy getBuildPatchPolicy() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getBuildPatchPolicy'");
+        throw new UnsupportedOperationException("Unimplemented method 'doHandle'");
     }
 }
