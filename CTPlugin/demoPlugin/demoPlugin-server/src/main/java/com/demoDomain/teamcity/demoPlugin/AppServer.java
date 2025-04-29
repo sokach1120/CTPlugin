@@ -23,4 +23,10 @@ public class AppServer extends BaseController {
         manager.registerController("/demoPlugin.html", this);
         myDescriptor = descriptor;
     }
+
+    @Override
+    protected ModelAndView doHandle(HttpServletRequest request, HttpServletResponse response) throws Exception {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'doHandle'");
+    }
 }
